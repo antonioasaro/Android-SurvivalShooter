@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
 
 	void Turning() 
 	{
+#if UNITY_ANDROID
+#else
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit floorHit;
 
@@ -48,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
 			Quaternion newRotation = Quaternion.LookRotation (playerToMouse);
 			playerRigidBody.MoveRotation(newRotation);
 		}
+#endif
 	}
 
 	void Animating(float h, float v)
