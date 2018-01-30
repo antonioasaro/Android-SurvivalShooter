@@ -33,7 +33,7 @@ public class PlayerShooting : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-		if(CnControls.CnInputManager.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
+		if(CnControls.CnInputManager.GetButton ("Jump") && timer >= timeBetweenBullets && Time.timeScale != 0)
         {
             Shoot ();
         }

@@ -63,13 +63,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b762eb0f3558f409212c8907843e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRange: 50
-  HorizontalAxisName: Horizontal
-  VerticalAxisName: Vertical
+  MovementRange: 10
+  HorizontalAxisName: Submit
+  VerticalAxisName: Cancel
   HideOnRelease: 0
-  MoveBase: 1
+  MoveBase: 0
   SnapsToFinger: 1
-  JoystickMoveAxis: 3
+  JoystickMoveAxis: 1
   JoystickBase: {fileID: 11400004}
   Stick: {fileID: 11400002}
   TouchZone: {fileID: 22400004}
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.022058845, g: 0.022058845, b: 0.022058845, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -221,18 +221,18 @@ RectTransform:
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 22400002}
   - {fileID: 22400000}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 366, y: -79}
   m_SizeDelta: {x: 264, y: 248}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

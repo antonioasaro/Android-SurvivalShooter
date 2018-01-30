@@ -23,12 +23,11 @@ public class PlayerMovement : MonoBehaviour
 	{
 		float h = CnControls.CnInputManager.GetAxisRaw ("Horizontal");
 		float v = CnControls.CnInputManager.GetAxisRaw ("Vertical");
-		float mx = CnControls.CnInputManager.GetAxisRaw ("Mouse X");
-		float my = CnControls.CnInputManager.GetAxisRaw ("Mouse Y");
-		print ("PlayerMovement: " + h + ", " + v + ", " + mx + ", " + my);
+		float fx = CnControls.CnInputManager.GetAxisRaw ("Submit");
+		print ("PlayerMovement: " + h + ", " + v + ", " + fx);
 
 		Move (h, v);
-		Turning (mx, my);
+		Turning (fx);
 		Animating (h, v); 
 	}
 
@@ -39,13 +38,13 @@ public class PlayerMovement : MonoBehaviour
 		playerRigidBody.MovePosition (transform.position + movement);
 	}
 
-	void Turning(float mx, float my) 
+	void Turning(float fx) 
 	{
 #if UNITY_ANDROID
-		if (mx >  0.50f) { rotAngle += 4; }
-		if (mx >  0.95f) { rotAngle += 8; }
-		if (mx < -0.50f) { rotAngle -= 4; }
-		if (mx < -0.95f) { rotAngle -= 8; }
+		if (fx >  0.50f) { rotAngle += 2; }
+		if (fx >  0.95f) { rotAngle += 4; }
+		if (fx < -0.50f) { rotAngle -= 2; }
+		if (fx < -0.95f) { rotAngle -= 4; }
 		Vector3 eulerAngleVelocity = new Vector3 (0, rotAngle, 0);
 		Quaternion deltaRotation = Quaternion.Euler(eulerAngleVelocity);
 		playerRigidBody.MoveRotation(deltaRotation);

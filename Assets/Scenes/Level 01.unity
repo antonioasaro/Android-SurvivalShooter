@@ -382,18 +382,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22409286, guid: 81acfa4b78dfa47499a6c2fd6e521ebd, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 22409286, guid: 81acfa4b78dfa47499a6c2fd6e521ebd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 22409286, guid: 81acfa4b78dfa47499a6c2fd6e521ebd, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 189116, guid: 81acfa4b78dfa47499a6c2fd6e521ebd, type: 2}
       propertyPath: m_Name
       value: Fire Button
@@ -1987,11 +1975,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400004, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 121.513
+      value: 366
       objectReference: {fileID: 0}
     - target: {fileID: 22400004, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: -79
       objectReference: {fileID: 0}
     - target: {fileID: 22400004, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
       propertyPath: m_SizeDelta.x
@@ -2028,46 +2016,6 @@ Prefab:
     - target: {fileID: 100004, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
       propertyPath: m_Name
       value: Look Joystick
-      objectReference: {fileID: 0}
-    - target: {fileID: 22400004, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 22400004, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 22400004, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
-      propertyPath: HorizontalAxisName
-      value: Mouse X
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
-      propertyPath: VerticalAxisName
-      value: Mouse Y
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
-      propertyPath: HideOnRelease
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
-      propertyPath: MovementRange
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400004, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
-      propertyPath: m_Color.r
-      value: 0.022058845
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400004, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
-      propertyPath: m_Color.g
-      value: 0.022058845
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400004, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
-      propertyPath: m_Color.b
-      value: 0.022058845
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb945e2a87718084184a72db9cf1ee27, type: 2}
