@@ -9,7 +9,7 @@ public class ControlsOnOff : MonoBehaviour {
 #if UNITY_ANDROID
 		CanvasGroup cg = GetComponent <CanvasGroup> ();
 		cg.interactable = true;
-		cg.alpha = 1;
+		cg.alpha = 0.5f;
 #endif
 	}
 	
