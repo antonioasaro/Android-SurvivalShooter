@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 	Rigidbody playerRigidBody;
 	int floorMask;
 	float camRayLength = 100f;
+	float rotAngle = 0f;
 
 	void Awake()
 	{
@@ -22,10 +23,12 @@ public class PlayerMovement : MonoBehaviour
 	{
 		float h = CnControls.CnInputManager.GetAxisRaw ("Horizontal");
 		float v = CnControls.CnInputManager.GetAxisRaw ("Vertical");
-		print ("PlayerMovement: " + h + ", " + v);
+		float mx = CnControls.CnInputManager.GetAxisRaw ("Mouse X");
+		float my = CnControls.CnInputManager.GetAxisRaw ("Mouse Y");
+		print ("PlayerMovement: " + h + ", " + v + ", " + mx + ", " + my);
 
 		Move (h, v);
-		Turning ();
+		Turning (mx, my);
 		Animating (h, v); 
 	}
 
@@ -36,9 +39,16 @@ public class PlayerMovement : MonoBehaviour
 		playerRigidBody.MovePosition (transform.position + movement);
 	}
 
-	void Turning() 
+	void Turning(float mx, float my) 
 	{
 #if UNITY_ANDROID
+		if (mx >  0.50f) { rotAngle += 4; }
+		if (mx >  0.95f) { rotAngle += 8; }
+		if (mx < -0.50f) { rotAngle -= 4; }
+		if (mx < -0.95f) { rotAngle -= 8; }
+		Vector3 eulerAngleVelocity = new Vector3 (0, rotAngle, 0);
+		Quaternion deltaRotation = Quaternion.Euler(eulerAngleVelocity);
+		playerRigidBody.MoveRotation(deltaRotation);
 #else
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit floorHit;
